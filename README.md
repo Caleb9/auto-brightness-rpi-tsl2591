@@ -1,7 +1,8 @@
 # auto-brightness-rpi-tsl2591
 
-Control monitor brightness to match ambient light with Raspberry Pi
-and [TSL2591](https://www.adafruit.com/product/1980) lux sensor.
+Set monitor brightness automatically to match ambient light with
+Raspberry Pi and [TSL2591](https://www.adafruit.com/product/1980) lux
+sensor.
 
 
 ## What?
@@ -23,15 +24,15 @@ brightness setting.
 Ambient light is sampled once per second. Even though it's possible to
 achieve stable lighting conditions with artificial light, a digital
 photo frame most likely sits somewhere in your room where daylight can
-reach it. Because daylight fluctuates constantly, the code does not
-immediately set brightness to currently detected value to avoid
-constant flickering of the brightness. Instead brightness is set to
-the *average of the readings from last 10 seconds*. In relatively
-stable lighting conditions this reduces the annoying flickering
-effect. When lighting changes significantly (e.g. when you switched
-light on in the room after dark), it takes around 10 seconds to
-gradually reach the target value. I haven't tested the app with strobo
-lights though.
+reach it. Daylight fluctuates constantly, even if very
+slightly. Because of that the app does not immediately set brightness
+to currently detected value to avoid constant flickering. Instead
+brightness is set to the *average of the readings from last 10
+seconds*. In relatively stable lighting conditions this reduces the
+annoying flickering effect. When lighting changes significantly
+(e.g. when you switch light on after dark), it takes around 10 seconds
+to gradually reach the target value. I haven't tested the app with
+strobo lights though.
 
 Currently, the entire range of sensor's readings is mapped linearly to
 monitor's brightness setting scale (usually 0-100). This approach is
@@ -50,12 +51,14 @@ Pi](https://learn.adafruit.com/adafruit-tsl2591/python-circuitpython#python-comp
 
 ### 1. Install dependencies
 
-The assumption is that you are starting with a fresh installation of
-Raspberry Pi OS Lite and you have command line access to the Pi.
+The assumption is you're using Raspberry Pi OS or another Debian based
+distro on your Pi.
 
 Update the system and install the OS packages needed
 
 ```
+sudo apt update && \
+sudo apt upgrade -y && \
 sudo apt install -y \
     python3-dev \
     python3-venv \

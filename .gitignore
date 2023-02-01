@@ -1,0 +1,4 @@
+*~
+*.pex
+venv/
+__pycache__/

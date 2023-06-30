@@ -8,10 +8,9 @@ sensor.
 ## What?
 
 I wrote this code for a DIY [digital photo frame
-project](https://github.com/Caleb9/synology-photos-slideshow) using
-Raspberry Pi connected to a monitor. Based on the TSL2591 lux sensor
-readings of visible ambient light, the app sets matching monitor
-brightness.
+project](https://github.com/Caleb9/syno-photo-frame) using Raspberry
+Pi connected to a monitor. Based on the TSL2591 lux sensor readings of
+visible ambient light, the app sets matching monitor brightness.
 
 
 ## How Does It Work?

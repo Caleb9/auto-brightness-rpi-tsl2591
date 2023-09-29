@@ -1,2 +1,3 @@
 adafruit-circuitpython-tsl2591
 numpy
+RPi.GPIO

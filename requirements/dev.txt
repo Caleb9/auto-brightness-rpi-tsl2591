@@ -6,59 +6,68 @@
 #
 --extra-index-url https://www.piwheels.org/simple
 
-adafruit-blinka==8.23.0
+adafruit-blinka==8.51.0
     # via
     #   adafruit-circuitpython-busdevice
+    #   adafruit-circuitpython-connectionmanager
     #   adafruit-circuitpython-requests
     #   adafruit-circuitpython-tsl2591
     #   adafruit-circuitpython-typing
-adafruit-circuitpython-busdevice==5.2.6
+adafruit-circuitpython-busdevice==5.2.11
     # via
     #   adafruit-circuitpython-tsl2591
     #   adafruit-circuitpython-typing
-adafruit-circuitpython-requests==2.0.2
+adafruit-circuitpython-connectionmanager==3.1.3
+    # via adafruit-circuitpython-requests
+adafruit-circuitpython-requests==4.1.9
     # via adafruit-circuitpython-typing
-adafruit-circuitpython-tsl2591==1.3.11
-    # via -r requirements/common.in
-adafruit-circuitpython-typing==1.9.5
+adafruit-circuitpython-tsl2591==1.4.1
+    # via -r /home/pi/auto-brightness-rpi-tsl2591/requirements/common.in
+adafruit-circuitpython-typing==1.11.2
     # via
     #   adafruit-blinka
     #   adafruit-circuitpython-busdevice
-adafruit-platformdetect==3.53.0
+adafruit-platformdetect==3.77.0
     # via adafruit-blinka
 adafruit-pureio==1.1.11
     # via adafruit-blinka
-build==1.0.3
-    # via pip-tools
-click==8.1.7
-    # via pip-tools
-numpy==1.26.1
-    # via -r requirements/common.in
-packaging==23.2
-    # via build
-pex==2.1.148
-    # via -r requirements/dev.in
-pip-tools==7.3.0
-    # via -r requirements/dev.in
-pyftdi==0.55.0
+binho-host-adapter==0.1.6
     # via adafruit-blinka
-pyproject-hooks==1.0.0
+build==1.2.2.post1
+    # via pip-tools
+click==8.1.8
+    # via pip-tools
+numpy==2.2.1
+    # via -r /home/pi/auto-brightness-rpi-tsl2591/requirements/common.in
+packaging==24.2
     # via build
+pex==2.29.0
+    # via -r requirements/dev.in
+pip-tools==7.4.1
+    # via -r requirements/dev.in
+pyftdi==0.56.0
+    # via adafruit-blinka
+pyproject-hooks==1.2.0
+    # via
+    #   build
+    #   pip-tools
 pyserial==3.5
-    # via pyftdi
-pyusb==1.2.1
+    # via
+    #   binho-host-adapter
+    #   pyftdi
+pyusb==1.3.1
     # via pyftdi
 rpi-gpio==0.7.1
     # via
-    #   -r requirements/common.in
+    #   -r /home/pi/auto-brightness-rpi-tsl2591/requirements/common.in
     #   adafruit-blinka
 rpi-ws281x==5.0.0
     # via adafruit-blinka
 sysv-ipc==1.1.0
     # via adafruit-blinka
-typing-extensions==4.8.0
+typing-extensions==4.12.2
     # via adafruit-circuitpython-typing
-wheel==0.41.2
+wheel==0.45.1
     # via
     #   -r requirements/dev.in
     #   pip-tools
